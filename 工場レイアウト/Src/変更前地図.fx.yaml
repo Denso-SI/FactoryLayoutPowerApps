@@ -1,0 +1,70 @@
+変更前地図 As screen:
+    OnVisible: |-
+        =Set(tanaFontSize,1);
+        Set(scale,1);
+        Set(tanascale,1);
+        Set(normalColor,Color.White);
+        Set(selectedColor,Color.Yellow);
+
+    lblTitle_6 As label:
+        Fill: =RGBA(251, 188, 159, 1)
+        Height: =69
+        Size: =24
+        Text: |+
+            ="【変更前】"&
+            "品番:" &　tblSagyo.Selected.品番　&"　　　"&
+            "ロケ番号:" &tblSagyo.Selected.移動前ロケ　&"　　　"&
+            "段数:"　&　tblSagyo.Selected.移動前段数 
+            
+        Width: =1366
+        ZIndex: =1
+
+    btnNextView_12 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Navigate(変更前棚)
+        Text: ="OK"
+        X: =1206
+        Y: =728
+        ZIndex: =2
+
+    btnNextView_11 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Back()
+        Text: ="戻る"
+        Y: =728
+        ZIndex: =3
+
+    Image2 As image:
+        Height: =647
+        Image: ='新しいビットマップ イメージ'
+        Width: =1105
+        X: =112
+        Y: =69
+        ZIndex: =4
+
+    カスタムラベル変更前ロケ As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =5
+        カスタムプロパティ1: |-
+            ={
+                //text:LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                text:"",
+                fontSize:tanaFontSize,
+                backColor:Color.Red,
+                borderColor:Color.Yellow,
+                visible:If(Mod(Timer1.Value, 1000) < 500, true, false)
+                }
+        棚ID: =tblSagyo.Selected.移動前ロケ
+
+    Timer1 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =1000
+        Repeat: =true
+        Visible: =false
+        Y: =372
+        ZIndex: =6
+

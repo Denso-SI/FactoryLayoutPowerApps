@@ -1,0 +1,117 @@
+変更後地図_bk As screen:
+    OnVisible: |-
+        =Set(tanaFontSize,10);
+        Set(scale,2000);
+        Set(tanascale,20);
+        Set(normalColor,Color.White);
+        Set(selectedColor,Color.Yellow)
+
+    カスタムラベル後_1 As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =2
+        カスタムプロパティ1: |-
+            ={
+                text:LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                fontSize:12,
+                backColor:If(tblSagyo.Selected.移動後ロケ=Self.棚ID,Color.Red,Color.White),
+                borderColor:Color.Black,
+                visible:If(LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ID<>"",true,false)
+                }
+        棚ID: =1
+
+    lblTitle_4 As label:
+        Fill: =RGBA(204, 231, 246, 1)
+        Height: =69
+        Size: =24
+        Text: |+
+            ="【変更後】"&
+            "品番:" &　tblSagyo.Selected.品番　&"　　　"&
+            "ロケ番号:" &tblSagyo.Selected.移動後ロケ　&"　　　"&
+            "段数:"　&　tblSagyo.Selected.移動後段数 
+            
+        Width: =1364
+        ZIndex: =8
+
+    btnNextView_8 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Navigate(変更後棚)
+        Text: ="OK"
+        X: =1176
+        Y: =680
+        ZIndex: =9
+
+    btnNextView_7 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Back()
+        Text: ="戻る"
+        X: =46
+        Y: =680
+        ZIndex: =14
+
+    カスタムラベル後_2 As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =15
+        カスタムプロパティ1: |-
+            ={
+                text:LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                fontSize:12,
+                backColor:If(tblSagyo.Selected.移動後ロケ=Self.棚ID,Color.Red,Color.White),
+                borderColor:Color.Black,
+                visible:If(LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ID<>"",true,false)
+                }
+        棚ID: =2
+
+    カスタムラベル後_3 As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =16
+        カスタムプロパティ1: |-
+            ={
+                text:LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                fontSize:12,
+                backColor:If(tblSagyo.Selected.移動後ロケ=Self.棚ID,Color.Red,Color.White),
+                borderColor:Color.Black,
+                visible:If(LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ID<>"",true,false)
+                }
+        棚ID: =3
+
+    カスタムラベル後_4 As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =17
+        カスタムプロパティ1: |-
+            ={
+                text:LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                fontSize:12,
+                backColor:If(tblSagyo.Selected.移動後ロケ=Self.棚ID,Color.Red,Color.White),
+                borderColor:Color.Black,
+                visible:If(LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ID<>"",true,false)
+                }
+        棚ID: =4
+
+    カスタムラベル後_5 As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =18
+        カスタムプロパティ1: |-
+            ={
+                text:LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                fontSize:12,
+                backColor:If(tblSagyo.Selected.移動後ロケ=Self.棚ID,Color.Red,Color.White),
+                borderColor:Color.Black,
+                visible:If(LookUp(kouta_visio_layout,ThisRecord.ShapeKey=Self.棚ID).ID<>"",true,false)
+                }
+        棚ID: =5
+

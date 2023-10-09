@@ -1,0 +1,136 @@
+作業一覧 As screen:
+    OnVisible: |-
+        =Refresh(kouta_visio_layout2);
+        Refresh(kouta_layout_Change);
+        Set(UpdateText,"");
+        Set(UpdateTextVisible,false);
+        Set(ListUpdateTimeDateTime,Text(Value(First(KoutaUpdateDate).更新時刻, "ja-jp"),"yyyy-mm-dd hh:mm:ss"))
+
+    lblTitle_2 As label:
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =65
+        Size: =32
+        Text: ="作業一覧"
+        Width: =1366
+        ZIndex: =1
+
+    Dropdown1 As dropdown:
+        Height: =48
+        Items: |-
+            =//データソースの参加日列を一覧表示する :: unique / sort / filter(2000年以降)
+            Sort(Filter(ForAll(Distinct(kouta_layout_Change, Text(作業日, "yyyy/mm/dd")), {Result: ThisRecord.Value}).Result, DateValue(Result)>DateTimeValue("2000/01/01")),Result,SortOrder.Descending)
+        Width: =1366
+        Y: =65
+        ZIndex: =2
+
+    "tblSagyo As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =640
+        Items: =Filter(kouta_layout_Change, 品番<>"",DateValue(作業日)= DateValue(Dropdown1.Selected.Result, "ja-jp"))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =1366
+        Y: =128
+        ZIndex: =3
+
+        枠 As rectangle:
+            BorderThickness: =1
+            Fill: =If(ThisItem.作業完了=1,Color.Gray,Color.White)
+            Height: =104
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        品番 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =32
+            Text: |-
+                ="品番:"&ThisItem.品番
+            VerticalAlign: =VerticalAlign.Top
+            Width: =341
+            X: =22
+            Y: =23
+            ZIndex: =2
+
+        変更前 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =39
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                ="【変更前】" & 
+                "ロケ番号:"&ThisItem.移動前ロケ &　"  " &
+                "段数:"&ThisItem.移動前段数
+            VerticalAlign: =VerticalAlign.Top
+            Width: =799
+            X: =391
+            Y: =11
+            ZIndex: =3
+
+        開始ボタン As button:
+            DisplayMode: =If(ThisItem.作業完了=1,DisplayMode.Disabled,DisplayMode.Edit)
+            OnSelect: =Navigate(変更前地図)
+            Text: |
+                =If(ThisItem.作業完了=1,"済","作業開始")
+            X: =1192
+            Y: =28
+            ZIndex: =5
+
+        変更後 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                ="【変更後】" & 
+                "ロケ番号:"&ThisItem.移動後ロケ &　"  " &
+                "段数:"&ThisItem.移動後段数
+            VerticalAlign: =VerticalAlign.Top
+            Width: =799
+            X: =391
+            Y: =50
+            ZIndex: =6
+
+    Label1 As label:
+        Height: =25
+        Text: ="指示データ更新日時："　& 　ListUpdateTimeDateTime
+        Width: =391
+        X: =747
+        Y: =3
+        ZIndex: =4
+
+    Button1 As button:
+        Fill: =RGBA(255, 191, 0, 1)
+        OnSelect: |-
+            =データ更新.Run();
+            Refresh(kouta_layout_Change);
+            Refresh(KoutaUpdateDate);
+        Text: ="更新"
+        X: =1186
+        Y: =12
+        ZIndex: =5
+
+    Label1_1 As label:
+        Height: =25
+        Text: =UpdateText
+        Width: =391
+        X: =747
+        Y: =36
+        ZIndex: =6
+
