@@ -437,12 +437,12 @@
       },
       "棚ID"
     ],
-    "LastModifiedTimestamp": "638324264711569380",
+    "LastModifiedTimestamp": "638324382542356268",
     "Name": "カスタムラベル",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "{\r\n    text:\"0\",\r\n    fontSize:12,\r\n    backColor:Color.SkyBlue,\r\n    borderColor:Color.Black,\r\n    visible:true\r\n    }",
+        "InvariantScript": "{\n    text:\"0\",\n    fontSize:12,\n    backColor:Color.SkyBlue,\n    borderColor:Color.Black,\n    visible:true\n    }",
         "Property": "カスタムプロパティ1",
         "RuleProviderType": "System"
       },
@@ -528,7 +528,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638324264711569380",
+  "LastModifiedTimestamp": "638324382542356268",
   "Name": "75ecdfbb8dfb406cb6e058b48ede257b",
   "OverridableProperties": {},
   "Version": "638301781051549114"
