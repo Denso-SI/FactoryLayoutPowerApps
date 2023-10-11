@@ -112,7 +112,6 @@
         Text: ="指示データ更新日時："　& 　ListUpdateTimeDateTime
         Width: =391
         X: =747
-        Y: =3
         ZIndex: =4
 
     Button1 As button:
