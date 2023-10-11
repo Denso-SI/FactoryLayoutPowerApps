@@ -1,0 +1,132 @@
+{
+  "1903b266-fc96-4077-9a34-8519688b4011": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "238c8169-74aa-4cba-9e2e-93028e82fcb9"
+    ],
+    "id": "1903b266-fc96-4077-9a34-8519688b4011"
+  },
+  "238c8169-74aa-4cba-9e2e-93028e82fcb9": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "ロジック フロー",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1903b266-fc96-4077-9a34-8519688b4011": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "8da3f514-3391-43b4-8332-d3f2f6e6d1af": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "20335bf8-af46-4be8-bca8-af233a3421f0"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "1903b266-fc96-4077-9a34-8519688b4011"
+        },
+        "shared_sharepointonline": {
+          "value": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "20335bf8-af46-4be8-bca8-af233a3421f0"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "データ更新"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "1903b266-fc96-4077-9a34-8519688b4011",
+      "shared_sharepointonline": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+    },
+    "dependents": [],
+    "id": "238c8169-74aa-4cba-9e2e-93028e82fcb9"
+  },
+  "8da3f514-3391-43b4-8332-d3f2f6e6d1af": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://globaldenso.sharepoint.com/teams/TMS_o365_jp004659": {
+        "dataSources": {
+          "kouta_layout_Change": {
+            "tableName": "bfe078ed-5e1d-461c-820c-83ed7844620b"
+          },
+          "KoutaUpdateDate": {
+            "tableName": "becbff28-cc0f-4d47-b278-3f5e8a35d827"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "kouta_layout_Change",
+      "KoutaUpdateDate"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "238c8169-74aa-4cba-9e2e-93028e82fcb9"
+    ],
+    "id": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+  },
+  "a337bcff-f251-4368-9cb2-9e2271dbaa97": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://globaldenso.sharepoint.com/teams/TMS_o365_jp004659": {
+        "dataSources": {
+          "kouta_visio_layout": {
+            "tableName": "b67d1ded-96aa-48b5-8386-459e0f264375"
+          },
+          "kouta_visio_layout2": {
+            "tableName": "6da3864a-2d39-4a71-ac6b-a6581cc43b8d"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "kouta_visio_layout",
+      "kouta_visio_layout2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a337bcff-f251-4368-9cb2-9e2271dbaa97"
+  }
+}
