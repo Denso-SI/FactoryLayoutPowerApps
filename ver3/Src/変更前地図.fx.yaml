@@ -38,14 +38,7 @@
     Image2 As image:
         Height: =647
         Image: ='新しいビットマップ イメージ'
-        OnSelect: |-
-            =If (Now() - LastClickTime) < 0.5 /* 0.5秒をダブルクリックの間隔として調整 */ then
-               Set(ClickedX, MouseX(CanvasApp));
-               Set(ClickedY, MouseY(CanvasApp));
-               /* ダブルクリック時の処理をここに追加 */
-            else
-               Set(LastClickTime, Now())
-            EndIf
+        OnSelect: =false;
         Width: =1105
         X: =112
         Y: =69
