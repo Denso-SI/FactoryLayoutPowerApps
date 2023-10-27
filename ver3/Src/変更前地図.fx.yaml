@@ -70,3 +70,40 @@
         Y: =372
         ZIndex: =6
 
+    座標gallery As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =Image2.Height
+        Items: =Sequence(Self.Height / Self.TemplateHeight)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =10
+        Width: =Image2.Width
+        X: =Image2.X
+        Y: =Image2.Y
+        ZIndex: =7
+
+        Rating5_1 As rating:
+            Default: =0
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Edit
+            FocusedBorderColor: =Self.BorderColor
+            Height: =10
+            HoverFill: =Self.Fill
+            Max: =100
+            OnSelect: =Select(Parent)
+            PressedFill: =Self.Fill
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    Icon2_2 As icon.Cancel:
+        Height: =21
+        Icon: =Icon.Cancel
+        Width: =21
+        X: =Gallery1_1.Selected.Rating5.Value * Gallery1_1.Width / Rating5.Max - Self.Width / 2
+        Y: =Gallery1_1.Selected.Value * Gallery1_1.TemplateHeight - Rating5.Height / 5 - Self.Height / 2
+        ZIndex: =8
+

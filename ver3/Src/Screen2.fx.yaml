@@ -1,6 +1,6 @@
-Screen1 As screen:
+Screen2 As screen:
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    Gallery1_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =Parent.Height
         Items: =Sequence(Self.Height / Self.TemplateHeight)
@@ -8,35 +8,30 @@ Screen1 As screen:
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =40
+        TemplateSize: =10
         Width: =Parent.Width
         ZIndex: =1
 
-        Rating4 As rating:
-            Default: |
-                =0
+        Rating5 As rating:
+            Default: =0
             DisabledFill: =Self.Fill
             DisplayMode: =DisplayMode.Edit
             FocusedBorderColor: =Self.BorderColor
             Height: =10
             HoverFill: =Self.Fill
-            Max: =200
+            Max: =100
             OnSelect: =Select(Parent)
             PressedFill: =Self.Fill
-            RatingFill: =RGBA(204, 231, 246, 1)
-            ShowValue: =false
-            Visible: |
-                =true
             Width: =Parent.Width
             X: =0
             Y: =0
-            ZIndex: =7
+            ZIndex: =1
 
-    Icon2 As icon.Cancel:
+    Icon2_1 As icon.Cancel:
         Height: =21
         Icon: =Icon.Cancel
         Width: =21
-        X: =Gallery1.Selected.Rating4.Value * Gallery1.Width / Rating4.Max - Self.Width / 2
-        Y: =Gallery1.Selected.Value * Gallery1.TemplateHeight - Rating4.Height / 2 - Self.Height / 2+20
+        X: =Gallery1_1.Selected.Rating5.Value * Gallery1_1.Width / Rating5.Max - Self.Width / 2
+        Y: =Gallery1_1.Selected.Value * Gallery1_1.TemplateHeight - Rating5.Height / 5 - Self.Height / 2
         ZIndex: =2
 
