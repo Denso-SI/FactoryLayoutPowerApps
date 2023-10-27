@@ -29,10 +29,10 @@ Screen1 As screen:
             ZIndex: =7
 
     Icon2 As icon.Cancel:
-        Height: =31
+        Height: =21
         Icon: =Icon.Cancel
-        Width: =31
-        X: =456
-        Y: =316
+        Width: =21
+        X: =Gallery1.Selected.Rating4.Value * Gallery1.Width / Rating4.Max - Self.Width / 2
+        Y: =Gallery1.Selected.Value * Gallery1.TemplateHeight - Rating4.Height / 2 - Self.Height / 2
         ZIndex: =2
 

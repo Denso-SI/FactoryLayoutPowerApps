@@ -146,7 +146,7 @@
         "Name": "lblCustom",
         "Parent": "カスタムラベル",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 42,
+        "PublishOrderIndex": 46,
         "Rules": [
           {
             "Category": "Data",
