@@ -1,0 +1,70 @@
+変更後地図 As screen:
+    OnVisible: |-
+        =Set(tanaFontSize,1);
+        Set(scale,1);
+        Set(tanascale,1);
+        Set(normalColor,Color.White);
+        Set(selectedColor,Color.Yellow);
+
+    Image2_1 As image:
+        Height: =647
+        Image: ='新しいビットマップ イメージ'
+        Width: =1105
+        X: =112
+        Y: =69
+        ZIndex: =4
+
+    カスタムラベル変更後ロケ As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =5
+        カスタムプロパティ1: |-
+            ={
+                //text:LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                text:"",
+                fontSize:tanaFontSize,
+                backColor:Color.Red,
+                borderColor:Color.Yellow,
+                visible:If(Mod(Timer1_1.Value, 1000) < 500, true, false)
+                }
+        棚ID: =tblSagyo.Selected.移動後ロケ
+
+    Timer1_1 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =1000
+        Repeat: =true
+        Visible: =false
+        Y: =372
+        ZIndex: =6
+
+    lblTitle_5 As label:
+        Fill: =RGBA(204, 231, 246, 1)
+        Height: =69
+        Size: =24
+        Text: |+
+            ="【変更後】"&
+            "品番:" &　tblSagyo.Selected.品番　&"　　　"&
+            "ロケ番号:" &tblSagyo.Selected.移動後ロケ　&"　　　"&
+            "段数:"　&　tblSagyo.Selected.移動後段数 
+            
+        Width: =1366
+        ZIndex: =7
+
+    btnNextView_9 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Navigate(変更後棚)
+        Text: ="OK"
+        X: =1206
+        Y: =728
+        ZIndex: =8
+
+    btnNextView_10 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Back()
+        Text: ="戻る"
+        Y: =728
+        ZIndex: =9
+

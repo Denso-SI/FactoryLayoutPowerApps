@@ -1,0 +1,67 @@
+変更後棚 As screen:
+
+    Image1_1 As image:
+        Height: =656
+        Image: =棚画像
+        Width: =925
+        X: =196
+        Y: =112
+        ZIndex: =1
+
+    Rectangle1_1 As rectangle:
+        Fill: =Color.Red
+        Height: =117
+        Width: =8*tblSagyo.Selected.占有幅
+        X: =237+84*tblSagyo.Selected.移動後アドレス
+        Y: =128*tblSagyo.Selected.移動後段数
+        ZIndex: =2
+
+    btnNextView_3 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: |-
+            =Patch(
+                kouta_layout_Change,
+                    LookUp(kouta_layout_Change,
+                    品番=tblSagyo.Selected.品番 &&
+                    品名=tblSagyo.Selected.品名 &&
+                    作業日=tblSagyo.Selected.作業日 &&
+                    巻数=tblSagyo.Selected.巻数 &&
+                    占有幅=tblSagyo.Selected.占有幅 &&
+                    移動前ロケ=tblSagyo.Selected.移動前ロケ &&
+                    移動前段数=tblSagyo.Selected.移動前段数 &&
+                    移動前アドレス=tblSagyo.Selected.移動前アドレス &&
+                    移動後ロケ=tblSagyo.Selected.移動後ロケ &&
+                    移動後段数=tblSagyo.Selected.移動後段数 &&
+                    移動後アドレス=tblSagyo.Selected.移動後アドレス
+                    ),
+                {
+                    作業完了: 1,
+                    作業完了日時:Now()
+                } // 更新したい列と新しい値を指定
+            )
+            ;Navigate(作業一覧)
+        Text: ="OK"
+        X: =1206
+        Y: =728
+        ZIndex: =3
+
+    lblTitle_1 As label:
+        Fill: =RGBA(204, 231, 246, 1)
+        Height: =65
+        Size: =32
+        Text: |+
+            ="【変更後】"&
+            "品番:" &　tblSagyo.Selected.品番　&"　　　"&
+            "ロケ番号:" &tblSagyo.Selected.移動後ロケ　&"　　　"&
+            "段数:"　&　tblSagyo.Selected.移動後段数 
+            
+        Width: =1366
+        ZIndex: =4
+
+    btnNextView_2 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Back()
+        Text: ="戻る"
+        Y: =728
+        ZIndex: =5
+

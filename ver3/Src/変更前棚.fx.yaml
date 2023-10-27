@@ -1,0 +1,46 @@
+変更前棚 As screen:
+
+    Image1 As image:
+        Height: =656
+        Image: =棚画像
+        Width: =925
+        X: =196
+        Y: =112
+        ZIndex: =1
+
+    Rectangle1 As rectangle:
+        Fill: =Color.Red
+        Height: =117
+        Width: =8*tblSagyo.Selected.占有幅
+        X: =237+84*tblSagyo.Selected.移動前アドレス
+        Y: =128*tblSagyo.Selected.移動前段数
+        ZIndex: =2
+
+    btnNextView As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Navigate(変更後地図)
+        Text: ="OK"
+        X: =1206
+        Y: =728
+        ZIndex: =3
+
+    lblTitle As label:
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =65
+        Size: =32
+        Text: |+
+            ="【変更前】"&
+            "品番:" &　tblSagyo.Selected.品番　&"　　　"&
+            "ロケ番号:" &tblSagyo.Selected.移動前ロケ　&"　　　"&
+            "段数:"　&　tblSagyo.Selected.移動前段数 
+            
+        Width: =1366
+        ZIndex: =4
+
+    btnNextView_1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: =Back()
+        Text: ="戻る"
+        Y: =728
+        ZIndex: =5
+

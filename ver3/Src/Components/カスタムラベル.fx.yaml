@@ -1,0 +1,30 @@
+カスタムラベル As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =100
+    Width: =100
+    X: =0
+    Y: =0
+    ZIndex: =1
+    カスタムプロパティ1: |-
+        ={
+            text:"0",
+            fontSize:12,
+            backColor:Color.SkyBlue,
+            borderColor:Color.Black,
+            visible:true
+            }
+    棚ID: =100
+
+    lblCustom As label:
+        Align: =Align.Center
+        BorderColor: =カスタムラベル.カスタムプロパティ1.borderColor
+        BorderThickness: =1
+        Color: =
+        Fill: =カスタムラベル.カスタムプロパティ1.backColor
+        Height: =カスタムラベル.Height
+        Size: =カスタムラベル.カスタムプロパティ1.fontSize
+        Text: =カスタムラベル.カスタムプロパティ1.text
+        Visible: =カスタムラベル.カスタムプロパティ1.visible
+        Width: =カスタムラベル.Width
+        ZIndex: =2
+
