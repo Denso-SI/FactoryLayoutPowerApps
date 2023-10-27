@@ -99,11 +99,11 @@
             Y: =0
             ZIndex: =1
 
-    Icon2_2 As icon.Cancel:
+    地図印 As icon.Cancel:
         Height: =21
         Icon: =Icon.Cancel
         Width: =21
-        X: =Gallery1_1.Selected.Rating5.Value * Gallery1_1.Width / Rating5.Max - Self.Width / 2
+        X: =座標gallery.Selected.Rating5_1.Value * 座標gallery.Width / Rating5_1.Max - Self.Width / 2
         Y: =Gallery1_1.Selected.Value * Gallery1_1.TemplateHeight - Rating5.Height / 5 - Self.Height / 2
         ZIndex: =8
 
