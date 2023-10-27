@@ -5,6 +5,7 @@
         Set(tanascale,1);
         Set(normalColor,Color.White);
         Set(selectedColor,Color.Yellow);
+        Set(LastClickTime, 0)
 
     lblTitle_6 As label:
         Fill: =RGBA(251, 188, 159, 1)
@@ -37,6 +38,14 @@
     Image2 As image:
         Height: =647
         Image: ='新しいビットマップ イメージ'
+        OnSelect: |-
+            =If (Now() - LastClickTime) < 0.5 /* 0.5秒をダブルクリックの間隔として調整 */ then
+               Set(ClickedX, MouseX(CanvasApp));
+               Set(ClickedY, MouseY(CanvasApp));
+               /* ダブルクリック時の処理をここに追加 */
+            else
+               Set(LastClickTime, Now())
+            EndIf
         Width: =1105
         X: =112
         Y: =69
