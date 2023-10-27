@@ -104,6 +104,6 @@
         Icon: =Icon.Cancel
         Width: =21
         X: =座標gallery.Selected.Rating5_1.Value * 座標gallery.Width / Rating5_1.Max - Self.Width / 2
-        Y: =Gallery1_1.Selected.Value * Gallery1_1.TemplateHeight - Rating5.Height / 5 - Self.Height / 2
+        Y: =座標gallery.Selected.Value * 座標gallery.TemplateHeight - Rating5_1.Height / 5 - Self.Height / 2
         ZIndex: =8
 
