@@ -437,7 +437,7 @@
       },
       "棚ID"
     ],
-    "LastModifiedTimestamp": "638325954348906303",
+    "LastModifiedTimestamp": "638339806353291381",
     "Name": "カスタムラベル",
     "Rules": [
       {
@@ -508,7 +508,7 @@
       "Name": "カスタムプロパティ1",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "カスタム プロパティ",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"backColor\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"borderColor\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"fontSize\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"visible\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"backColor\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"borderColor\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"fontSize\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"visible\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}]}}"
     },
     {
       "Category": 0,
@@ -517,7 +517,7 @@
       "Name": "棚ID",
       "PropertyDataTypeKey": "Number",
       "Tooltip": "カスタム プロパティ",
-      "Type": "{\"Version\":\"1.334\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.335\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -528,7 +528,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638325954348906303",
+  "LastModifiedTimestamp": "638339806353291381",
   "Name": "75ecdfbb8dfb406cb6e058b48ede257b",
   "OverridableProperties": {},
   "Version": "638301781051549114"
