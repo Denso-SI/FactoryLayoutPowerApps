@@ -1,0 +1,30 @@
+Screen1 As screen:
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =Parent.Height
+        Items: =Sequence(Self.Height / Self.TemplateHeight)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =10
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Rating4 As rating:
+            Default: |
+                =0
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Edit
+            FocusedBorderColor: =Self.BorderColor
+            Height: =40
+            HoverFill: =Self.Fill
+            Max: =200
+            OnSelect: =Select(Parent)
+            PressedFill: =Self.Fill
+            ShowValue: =false
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =7
+
