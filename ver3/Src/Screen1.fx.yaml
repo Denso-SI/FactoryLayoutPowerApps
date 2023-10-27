@@ -28,3 +28,11 @@ Screen1 As screen:
             Y: =0
             ZIndex: =7
 
+    Icon2 As icon.Cancel:
+        Height: =31
+        Icon: =Icon.Cancel
+        Width: =31
+        X: =456
+        Y: =316
+        ZIndex: =2
+
