@@ -6,7 +6,6 @@
         Set(normalColor,Color.White);
         Set(selectedColor,Color.Yellow);
         Set(LastClickTime, 0);
-        Set(SelectRow,Blank())
 
     lblTitle_6 As label:
         Fill: =RGBA(251, 188, 159, 1)
@@ -109,7 +108,7 @@
     地図印 As icon.Cancel:
         Height: =21
         Icon: =Icon.Cancel
-        OnSelect: =Set(tableRow,LookUp(kouta_visio_layout2,PinX<=Self.X And (PinX+Width)<=Self.X And PinY<=Self.Y And (PinY+Height)<=Self.Y) 
+        OnSelect: =Set(SelectRow,LookUp(kouta_visio_layout2,PinX<=Self.X And (PinX+Width)<=Self.X And PinY<=Self.Y And (PinY+Height)<=Self.Y);
         Width: =21
         X: =座標gallery.Selected.Rating5_1.Value * 座標gallery.Width / Rating5_1.Max - Self.Width / 2+ 座標gallery.X
         Y: =座標gallery.Selected.Value * 座標gallery.TemplateHeight - Rating5_1.Height / 5 - Self.Height / 2　+ 座標gallery.Y
@@ -118,7 +117,7 @@
     Label2 As label:
         Height: =247
         Text: |-
-            ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y & Char(10) & SelectRow
+            ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y 
         Width: =112
         Y: =200
         ZIndex: =9
