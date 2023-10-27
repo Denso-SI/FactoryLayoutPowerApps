@@ -5,7 +5,8 @@
         Set(tanascale,1);
         Set(normalColor,Color.White);
         Set(selectedColor,Color.Yellow);
-        Set(LastClickTime, 0)
+        Set(LastClickTime, 0);
+        Set(SelectRow,Blank())
 
     lblTitle_6 As label:
         Fill: =RGBA(251, 188, 159, 1)
@@ -71,7 +72,11 @@
         ZIndex: =6
 
     座標gallery As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
         DelayItemLoading: =true
+        FocusedBorderColor: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =0
         Height: =Image2.Height
         Items: =Sequence(Self.Height / Self.TemplateHeight)
         Layout: =Layout.Vertical
@@ -85,6 +90,7 @@
         ZIndex: =7
 
         Rating5_1 As rating:
+            BorderColor: =RGBA(0, 0, 0, 0)
             Default: =0
             DisabledFill: =Self.Fill
             DisplayMode: =DisplayMode.Edit
@@ -92,8 +98,9 @@
             Height: =10
             HoverFill: =Self.Fill
             Max: =100
-            OnSelect: =Select(Parent)
+            OnSelect: =false;
             PressedFill: =Self.Fill
+            RatingFill: =RGBA(0, 0, 0, 0)
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -102,8 +109,17 @@
     地図印 As icon.Cancel:
         Height: =21
         Icon: =Icon.Cancel
+        OnSelect: =Set(tableRow,LookUp(kouta_visio_layout2,PinX<=Self.X And (PinX+Width)<=Self.X And PinY<=Self.Y And (PinY+Height)<=Self.Y) 
         Width: =21
         X: =座標gallery.Selected.Rating5_1.Value * 座標gallery.Width / Rating5_1.Max - Self.Width / 2+ 座標gallery.X
         Y: =座標gallery.Selected.Value * 座標gallery.TemplateHeight - Rating5_1.Height / 5 - Self.Height / 2　+ 座標gallery.Y
         ZIndex: =8
+
+    Label2 As label:
+        Height: =247
+        Text: |-
+            ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y & Char(10) & SelectRow
+        Width: =112
+        Y: =200
+        ZIndex: =9
 
