@@ -120,7 +120,7 @@
         Height: =247
         Text: |-
             ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y &  Char(10)  
-            &　LookUp(kouta_visio_layout2,PinX<=地図印.X And PinY<=地図印.Y And (PinX+Width)<=地図印.X And (PinY+Height)<=地図印.Y).ID
+            &　LookUp(kouta_visio_layout2,PinX<地図印.X And PinY<地図印.Y).ID
         Width: =112
         Y: =200
         ZIndex: =9
