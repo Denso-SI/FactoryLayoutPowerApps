@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-09-14T16:54:44.1270000Z",
+      "LastChangedTimeString": "2023-09-20T17:03:23.8550000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -35,6 +35,8 @@
       "field_4": "PinY",
       "field_5": "ShapeText",
       "ID": "ID",
+      "MaxX": "MaxX",
+      "MinY": "MinY",
       "Modified": "更新日時",
       "OData__ColorTag": "色タグ",
       "Title": "ShapeKey"

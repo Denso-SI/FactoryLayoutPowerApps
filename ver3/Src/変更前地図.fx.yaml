@@ -6,7 +6,7 @@
         Set(normalColor,Color.White);
         Set(selectedColor,Color.Yellow);
         Set(LastClickTime, 0);
-        Set(SelectRow,LookUp(kouta_visio_layout2,PinX<=地図印.X And PinY<=地図印.Y And (PinX+Width)<=地図印.X And (PinY+Height)<=地図印.Y).ID);
+        Set(SelectRow,LookUp(kouta_visio_layout2,PinX<=地図印.X And PinY<=地図印.Y And (PinX+Width)<=地図印.X And (PinY+Height)<=地図印.Y).ShapeText);
 
     lblTitle_6 As label:
         Fill: =RGBA(251, 188, 159, 1)
@@ -83,7 +83,7 @@
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =10
+        TemplateSize: =5
         Width: =Image2.Width
         X: =Image2.X
         Y: =Image2.Y
@@ -95,12 +95,12 @@
             DisabledFill: =Self.Fill
             DisplayMode: =DisplayMode.Edit
             FocusedBorderColor: =Self.BorderColor
-            Height: =10
+            Height: =5
             HoverFill: =Self.Fill
-            Max: =100
+            Max: =50
             OnSelect: =false;
             PressedFill: =Self.Fill
-            RatingFill: =RGBA(0, 0, 0, 0)
+            RatingFill: =RGBA(204, 231, 246, 1)
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -120,8 +120,16 @@
         Height: =247
         Text: |-
             ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y &  Char(10)  
-            &　LookUp(kouta_visio_layout2,PinX<地図印.X And PinY<地図印.Y).ID
+            &　LookUp(kouta_visio_layout2,PinX<=地図印.X And Int(MaxX) >= 地図印.X And PinY>=地図印.Y And Int(MinY) <= 地図印.Y ).ShapeText 
         Width: =112
         Y: =200
         ZIndex: =9
+
+    Button2 As button:
+        Height: =34
+        Size: =10
+        Text: ="在庫取得"
+        Width: =82
+        Y: =378
+        ZIndex: =10
 
