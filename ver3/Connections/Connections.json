@@ -93,9 +93,44 @@
     ],
     "dependencies": {},
     "dependents": [
-      "238c8169-74aa-4cba-9e2e-93028e82fcb9"
+      "238c8169-74aa-4cba-9e2e-93028e82fcb9",
+      "9c4a7cc0-2566-4d9e-a763-c91637ff93dc"
     ],
     "id": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+  },
+  "9c4a7cc0-2566-4d9e-a763-c91637ff93dc": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "8da3f514-3391-43b4-8332-d3f2f6e6d1af": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "18c6a32e-e175-469e-b468-b822f9e1573a"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "18c6a32e-e175-469e-b468-b822f9e1573a"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "座標に対する地図オブジェクト取得"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "8da3f514-3391-43b4-8332-d3f2f6e6d1af"
+    },
+    "dependents": [],
+    "id": "9c4a7cc0-2566-4d9e-a763-c91637ff93dc"
   },
   "a337bcff-f251-4368-9cb2-9e2271dbaa97": {
     "appActions": [

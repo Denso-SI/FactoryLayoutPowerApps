@@ -437,7 +437,7 @@
       },
       "棚ID"
     ],
-    "LastModifiedTimestamp": "638339808546543715",
+    "LastModifiedTimestamp": "638342275684794651",
     "Name": "カスタムラベル",
     "Rules": [
       {
@@ -528,7 +528,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638339808546543715",
+  "LastModifiedTimestamp": "638342275684794651",
   "Name": "75ecdfbb8dfb406cb6e058b48ede257b",
   "OverridableProperties": {},
   "Version": "638301781051549114"
