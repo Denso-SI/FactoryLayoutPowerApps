@@ -100,7 +100,7 @@
             Max: =50
             OnSelect: =false;
             PressedFill: =Self.Fill
-            RatingFill: =RGBA(204, 231, 246, 1)
+            RatingFill: =RGBA(0, 0, 0, 0)
             Width: =Parent.Width
             X: =0
             Y: =0
