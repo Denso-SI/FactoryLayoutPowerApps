@@ -122,8 +122,8 @@
         Height: =247
         Text: |-
             ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y &  Char(10)  
-            &　LookUp(kouta_visio_layout2,PinX<=地図印.X And Int(MaxX) >= 地図印.X And PinY>=地図印.Y And Int(MinY) <= 地図印.Y ).ShapeText 
-            & SerchX
+            &　LookUp(kouta_visio_layout2,PinX<=地図印.X And Int(MaxX) >= 地図印.X And PinY>=地図印.Y And Int(MinY) <= 地図印.Y ).ShapeText &  Char(10) 
+            & SerchX 
             & SerchY
         Width: =112
         Y: =155
