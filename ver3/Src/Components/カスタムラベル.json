@@ -146,7 +146,7 @@
         "Name": "lblCustom",
         "Parent": "カスタムラベル",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 55,
+        "PublishOrderIndex": 58,
         "Rules": [
           {
             "Category": "Data",
@@ -437,7 +437,7 @@
       },
       "棚ID"
     ],
-    "LastModifiedTimestamp": "638344138665442820",
+    "LastModifiedTimestamp": "638354457702466359",
     "Name": "カスタムラベル",
     "Rules": [
       {
@@ -528,7 +528,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638344138665442820",
+  "LastModifiedTimestamp": "638354457702466359",
   "Name": "75ecdfbb8dfb406cb6e058b48ede257b",
   "OverridableProperties": {},
   "Version": "638301781051549114"

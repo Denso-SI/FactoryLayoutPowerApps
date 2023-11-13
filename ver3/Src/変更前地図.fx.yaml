@@ -7,6 +7,8 @@
         Set(selectedColor,Color.Yellow);
         Set(LastClickTime, 0);
         Set(SelectRow,LookUp(kouta_visio_layout2,PinX<=地図印.X And PinY<=地図印.Y And (PinX+Width)<=地図印.X And (PinY+Height)<=地図印.Y).ShapeText);
+        Set(SerchX, 0);
+        Set(SerchY, 0);
 
     lblTitle_6 As label:
         Fill: =RGBA(251, 188, 159, 1)
@@ -132,4 +134,29 @@
         Width: =82
         Y: =378
         ZIndex: =10
+
+    カスタムラベルロケチェック As カスタムラベル:
+        Height: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
+        Width: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
+        X: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
+        Y: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        ZIndex: =11
+        カスタムプロパティ1: |-
+            ={
+                //text:LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).ShapeText,
+                text:"",
+                fontSize:tanaFontSize,
+                backColor:Color.Yellow,
+                borderColor:Color.Yellow,
+                visible:If(Mod(Timer1.Value, 1000) < 500, true, false)
+                }
+        棚ID: =tblSagyo.Selected.移動前ロケ
+
+    TextInput1 As text:
+        Default: ="テキスト入力"
+        Height: =53
+        Width: =149
+        X: =1217
+        Y: =407
+        ZIndex: =12
 
