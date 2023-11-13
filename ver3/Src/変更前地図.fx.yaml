@@ -123,7 +123,7 @@
         Text: |-
             ="x:" & 地図印.X & Char(10) & "y:" & 地図印.Y &  Char(10)  
             &　LookUp(kouta_visio_layout2,PinX<=地図印.X And Int(MaxX) >= 地図印.X And PinY>=地図印.Y And Int(MinY) <= 地図印.Y ).ShapeText &  Char(10) 
-            & SerchX 
+            & SerchX &  Char(10) 
             & SerchY
         Width: =112
         Y: =155
@@ -158,8 +158,8 @@
         Default: ="テキスト入力"
         Height: =53
         OnChange: |-
-            =Set(SerchX, LookUp(kouta_visio_layout2,ShapeText=Self.Text).PinX;
-            Set(SerchY, LookUp(kouta_visio_layout2,ShapeText=Self.Text).PinY;
+            =Set(SerchX, LookUp(kouta_visio_layout2,ShapeText=Self.Text).PinX);
+            Set(SerchY, LookUp(kouta_visio_layout2,ShapeText=Self.Text).PinY);
         Width: =149
         X: =1217
         Y: =407
