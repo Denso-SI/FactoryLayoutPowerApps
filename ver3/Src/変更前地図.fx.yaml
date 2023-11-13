@@ -112,7 +112,7 @@
         Color: =RGBA(255, 0, 0, 1)
         Height: =21
         Icon: =Icon.Cancel
-        OnSelect: =SelectRow=LookUp(kouta_visio_layout2,PinX<=Self.X And PinY<=Self.Y).ID;
+        OnSelect: =
         Width: =21
         X: =座標gallery.Selected.Rating5_1.Value * 座標gallery.Width / Rating5_1.Max - Self.Width / 2+ 座標gallery.X
         Y: =座標gallery.Selected.Value * 座標gallery.TemplateHeight - Rating5_1.Height / 5 - Self.Height / 2　+ 座標gallery.Y
