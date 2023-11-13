@@ -2298,47 +2298,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "変更前地図.カスタムラベルロケチェック.Y"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "変更前地図.カスタムラベルロケチェック.Y",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 46,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Y",
-                "module": "変更前地図",
-                "type": "変更前地図.カスタムラベルロケチェック"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text",
-              "Number"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "変更前地図.カスタムラベルロケチェック.Height"
                 }
               ],
@@ -2398,47 +2357,6 @@
               },
               "properties": {
                 "member": "Width",
-                "module": "変更前地図",
-                "type": "変更前地図.カスタムラベルロケチェック"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text",
-              "Number"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "変更前地図.カスタムラベルロケチェック.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "変更前地図.カスタムラベルロケチェック.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 46,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
                 "module": "変更前地図",
                 "type": "変更前地図.カスタムラベルロケチェック"
               }
@@ -3060,36 +2978,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.SerchX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.SerchX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SerchX",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.LastClickTime"
                 }
               ],
@@ -3131,36 +3019,6 @@
               },
               "properties": {
                 "member": "UpdateTextVisible",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.SerchY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.SerchY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "SerchY",
                 "module": "App",
                 "type": "App"
               }

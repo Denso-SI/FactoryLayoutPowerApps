@@ -138,8 +138,8 @@
     カスタムラベルロケチェック As カスタムラベル:
         Height: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Height/tanascale
         Width: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).Width/tanascale
-        X: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinX/scale
-        Y: =LookUp(kouta_visio_layout2,ThisRecord.ShapeKey=Self.棚ID).PinY/scale
+        X: =SerchX
+        Y: =SerchY
         ZIndex: =11
         カスタムプロパティ1: |-
             ={
